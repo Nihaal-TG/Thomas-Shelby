@@ -95,7 +95,7 @@
         },
         "SUPPORT_CHAT": {
             "description": "Updated Channel Username Without @ Not Chanel ID",
-            "value": "NL_BOTx",
+            "value": "NL_BOTxCHAT",
             "required": false
         },
         "IMDB": {
