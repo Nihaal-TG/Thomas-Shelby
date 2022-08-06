@@ -14,7 +14,8 @@ Very Simple Bot Auto Filter bot
 
 #### Deploy on Heroku
 **BEFORE YOU DEPLOY ON HEROKU, YOU SHOULD FORK THE REPO**<br>
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)</br>
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Nihaal-TG/Thomas-Shelby)</br>
 
 #### Deploy in your VPS
 ````bash
