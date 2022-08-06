@@ -3,7 +3,12 @@ Very Simple Bot Auto Filter bot
 ##[![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Bot+Name+»+Thomas+Shelby+Bot!;created+by+NL_BOTZ+Team!;A+simple+autofilter+Bot!;Auto+filter+with+double+button!;start+message+with+pic!;and+all+futures!)
 </p>
 
-![Thomas Shelby](image(1).jpeg)
+<p align="center">
+  <img src="image(1).jpeg" alt="Thomas Shelby">
+</p>
+<h1 align="center">
+  <b>Thomas Shelby Bot</b>
+</h1>
 
 ᴀᴜᴛᴏғɪʟᴛᴇʀ ʙᴏᴛ ᴡɪᴛʜ ᴀᴅᴠᴀɴᴄᴇᴅ ғᴇᴀᴛᴜʀᴇs
 
