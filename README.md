@@ -4,7 +4,7 @@ Very Simple Bot Auto Filter bot
 </p>
 
 <p align="center">
-  <img src="images(1).jpeg" alt="Thomas Shelby">
+  <img src="images (1).jpeg" alt="Thomas Shelby">
 </p>
 <h1 align="center">
   <b>Thomas Shelby Bot</b>
