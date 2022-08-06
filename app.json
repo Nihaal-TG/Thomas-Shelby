@@ -1,5 +1,5 @@
 {
-    "name": "ᗩᒍᗩ᙭",
+    "name": "𝖳𝖧𝖮𝖬𝖠𝖲 𝖲𝖧𝖤𝖫𝖡𝖸",
     "description": "This Bot Will Help You To Store Files In Cloud Storage. You Can Add Files To The Bot By Forward the last file from a public channel to your bot and Press Yes Button.. If The Files Channl Is Private Make the bot admin on the channel and forward the last file to bot. Then Add the bot to you group and send the movie name The Bot Will Give the file in Bot PM..✮✮",
     "logo": "https://telegra.ph/file/1b837a8df2670b0097aaf.jpg",
     "stack": "container",
@@ -16,8 +16,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/Aadhi000/Ajax",
-    "repository": "https://github.com/Aadhi000/Ajax",
+    "website": "https://github.com/Nihaal-TG/Thomas-Shelby",
+    "repository": "https://github.com/Nihaal-TG/Thomas-Shelby",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
@@ -71,13 +71,21 @@
             "description": "mongoDB URI.",
             "required": true
         },
+        "CH_FILTER": {
+            "description": "File Channel Id",
+            "required": true
+        },
+        "CH_LINK": {
+            "description": "File Channel Link",
+            "required": true
+        },
         "DATABASE_NAME": {
             "description": "Name of the database in mongoDB.",
             "required": false
         },
         "COLLECTION_NAME": {
             "description": "Name of the collections. Defaults to Telegram_files. If you are using the same database, then use different collection name for each bot",
-            "value": "Ajax_Files",
+            "value": "Thomas_Files",
             "required": false
         },
         "CACHE_TIME": {
@@ -87,7 +95,7 @@
         },
         "SUPPORT_CHAT": {
             "description": "Updated Channel Username Without @ Not Chanel ID",
-            "value": "OpusTechz",
+            "value": "NL_BOTx",
             "required": false
         },
         "IMDB": {
@@ -105,7 +113,7 @@
         },
         "P_TTI_SHOW_OFF": {
             "description": "Customize Result Buttons to Callback or Url by (True = url / False = callback)",
-            "value": "True",
+            "value": "false",
             "required": false
         }
     },
