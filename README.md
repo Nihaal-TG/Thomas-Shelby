@@ -61,7 +61,7 @@ Commands
 
 And More
 
-####Thanks 
+#### Thanks
 
 • To [DKBOTx](https://t.me/DKBOTxCHATS)
 
