@@ -61,8 +61,8 @@ Commands
 
 And More
 
-##Thanks 
+####Thanks 
 
-• To [DKBOTx](https://t.me/DKBOTxCHAT)
+• To [DKBOTx](https://t.me/DKBOTxCHATS)
 
 • And Adhi Bro For His Pever Base Repo
