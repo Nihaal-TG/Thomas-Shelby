@@ -1,7 +1,7 @@
 from googletrans import Translator
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-from NL_BOTZ.admemes.list import list
+from NL_BOTZ.Modules.list import list
 
 @Client.on_message(filters.command(["tr"]))
 async def left(client,message):
