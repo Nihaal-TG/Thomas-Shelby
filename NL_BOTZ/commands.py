@@ -2,6 +2,8 @@ import os
 import logging
 import random
 import asyncio
+import pytz
+import datetime
 from Script import script
 from pyrogram import Client, filters
 from pyrogram.errors import ChatAdminRequired, FloodWait
@@ -38,13 +40,30 @@ async def start(client, message):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
+        T = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+
+        Time = T.hour
+        
+        if Time < 12:
+            greet="ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ" 
+        elif Time < 15:
+            greet="ɢᴏᴏᴅ ᴀғᴛᴇʀɴᴏᴏɴ" 
+        elif Time < 20:
+            greet="ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ"
+        else:
+            greet="ɢᴏᴏᴅ ɴɪɢʜᴛ"
+        
+        START_TXT = f"""
+<b>{greet} {message.from_user.mention}  ʙᴜᴅᴅʏ
+ᴍʏ ɴᴀᴍᴇ ɪꜱ  <a href=https://t.me/CL_FILTER_BOT><b>『 𝐓ʜᴏᴍᴀs 𝐒ʜᴇʟʙʏ 』</b></a>  ɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ʏᴏᴜ ᴍᴏᴠɪᴇꜱ ᴊᴜꜱᴛ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ꜱᴇᴇ ᴍʏ ᴘᴏᴡᴇʀ 😈</b>
+"""
         buttons = [[
             InlineKeyboardButton('✨ ᴄʟɪᴄᴋ ʜᴇʀᴇ ғᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴs ✨', callback_data='start')
         ]]         
         reply_markup = InlineKeyboardMarkup(buttons)        
         await message.reply_photo(
             photo=random.choice(PICS),
-            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+            caption=START_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
         )
@@ -74,13 +93,30 @@ async def start(client, message):
             )
         return
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
+        T = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+
+        Time = T.hour
+        
+        if Time < 12:
+            greet="ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ" 
+        elif Time < 15:
+            greet="ɢᴏᴏᴅ ᴀғᴛᴇʀɴᴏᴏɴ" 
+        elif Time < 20:
+            greet="ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ"
+        else:
+            greet="ɢᴏᴏᴅ ɴɪɢʜᴛ"
+        
+        START_TXT = f"""
+<b>{greet} {message.from_user.mention}  ʙᴜᴅᴅʏ
+ᴍʏ ɴᴀᴍᴇ ɪꜱ  <a href=https://t.me/CL_FILTER_BOT><b>『 𝐓ʜᴏᴍᴀs 𝐒ʜᴇʟʙʏ 』</b></a>  ɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ʏᴏᴜ ᴍᴏᴠɪᴇꜱ ᴊᴜꜱᴛ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ꜱᴇᴇ ᴍʏ ᴘᴏᴡᴇʀ 😈</b>
+"""
         buttons = [[
             InlineKeyboardButton('✨ ᴄʟɪᴄᴋ ʜᴇʀᴇ ғᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴs ✨', callback_data='start')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
+        ]]         
+        reply_markup = InlineKeyboardMarkup(buttons)        
         await message.reply_photo(
             photo=random.choice(PICS),
-            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+            caption=START_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
         )
