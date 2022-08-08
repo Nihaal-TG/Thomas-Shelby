@@ -71,11 +71,11 @@
             "description": "mongoDB URI.",
             "required": true
         },
-        "CH_FILTER": {
+        "CHANNEL_ID": {
             "description": "File Channel Id",
             "required": true
         },
-        "CH_LINK": {
+        "CHANNEL_LINK": {
             "description": "File Channel Link",
             "required": true
         },
