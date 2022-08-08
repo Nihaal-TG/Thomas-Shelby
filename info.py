@@ -93,9 +93,8 @@ FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
-CH_LINK = environ.get('CH_LINK', "")
-CH_FILTER = int(environ.get('CH_FILTER', 0))
-START_IMAGE_URL = environ.get('START_IMAGE_URL', "")
+CHANNEL_LINK = environ.get('CHANNEL_LINK', "")
+CHANNEL_ID = int(environ.get('CHANNEL_ID', 0))
                       
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
