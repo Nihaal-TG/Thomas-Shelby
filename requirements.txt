@@ -49,3 +49,6 @@ ffmpeg-python
 ffmpeg
 Pillow
 ujson
+pytz
+datetime
+speedtest
