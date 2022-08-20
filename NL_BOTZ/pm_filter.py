@@ -820,12 +820,25 @@ async def cb_handler(client: Client, query: CallbackQuery):
     ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.delete()
-        await query.message.reply_photo(
-            photo=random.choice(PICS),
-            caption=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode='html',
-        )
+        if not PICS:
+            await query.message.reply(
+                script.START_TXT.format(
+                    query.from_user.mention, 
+                    temp.U_NAME, 
+                    temp.B_NAME,
+                ),
+                reply_markup=reply_markup
+            )
+        else:
+            await query.message.reply_photo(
+                photo=PICS,
+                caption=script.START_TXT.format(
+                    query.from_user.mention , 
+                    temp.U_NAME, 
+                    temp.B_NAME,
+                ),
+                reply_markup=reply_markup
+            )
         
     elif query.data == "photo":
         buttons = [[
