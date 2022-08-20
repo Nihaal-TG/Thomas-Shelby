@@ -7,7 +7,7 @@ import pyrogram
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
 from info import ADMINS, AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, AUTH_GROUPS, P_TTI_SHOW_OFF, IMDB, \
-    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, CHANNEL_ID, CHANNEL_LINK
+    SINGLE_BUTTON, SPELL_CHECK_REPLY, IMDB_TEMPLATE, CHANNEL_ID, CHANNEL_LINK, PICS
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
@@ -1011,7 +1011,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "owner":
         buttons = [[       
-            InlineKeyboardButton('🔰 ɪɴsᴛᴀɢʀᴀᴍ 🔰', url='https://instagram.com/__nihaal_efx__?igshid=YmMyMTA2M2Y='),
+            InlineKeyboardButton('🔰 ɪɴsᴛᴀɢʀᴀᴍ 🔰', url='https://instagram.com'),
             InlineKeyboardButton('🔰 ᴛᴇʟᴇɢʀᴀᴍ 🔰', url='https://t.me/NL_MP4')
         ], [
  
@@ -1041,8 +1041,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         InlineKeyboardButton('⛔️ ᴄʟɪᴄᴋ ᴛᴏ ᴄʟᴏsᴇ ᴘᴀɢᴇs ⛔️', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit(
-            text=script.ABOUT_TXT.format(temp.B_NAME),
+        await query.message.delete()
+        await query.message.reply_photo(
+            photo=random.choice(PICS),
+            caption=script.ABOUT_TXT.format(temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode='html',
         )
