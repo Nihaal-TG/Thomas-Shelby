@@ -817,8 +817,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         InlineKeyboardButton('🔰 ɢᴏ ʙᴀᴄᴋ ᴛᴏ ᴍᴀɪɴ ᴍᴇɴᴜ 🔰', callback_data='nihu')   
     ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
+        await query.message.delete()
+        await query.message.reply_photo(
+            photo=random.choice(PICS),
+            caption=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode='html',
         )
@@ -1042,9 +1044,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.delete()
-        await query.message.reply_photo(
-            photo='https://telegra.ph/file/90049c7aa5b86b101a8d7.jpg',
-            caption=script.ABOUT_TXT.format(temp.B_NAME),
+        await query.message.reply(
+            text=script.ABOUT_TXT.format(temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode='html',
         )
