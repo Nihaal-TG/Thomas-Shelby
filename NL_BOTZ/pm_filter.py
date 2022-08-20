@@ -821,8 +821,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.delete()
         if not PICS:
-            await query.message.reply(
-                script.START_TXT.format(
+            await query.message.reply_text(
+                text=script.START_TXT.format(
                     query.from_user.mention, 
                     temp.U_NAME, 
                     temp.B_NAME,
@@ -1059,7 +1059,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.delete()
-        await query.message.reply(
+        await query.message.reply_text(
             text=script.ABOUT_TXT.format(temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode='html',
