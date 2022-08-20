@@ -810,24 +810,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
         InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
    ],[
-        InlineKeyboardButton('🍁 ᴏᴡɴᴇʀ', callback_data='me'),
-        InlineKeyboardButton('🌿 ɢʀᴏᴜᴘ', url='https://t.me/movie_lookam')
-   ],[      
-        InlineKeyboardButton('⚙️ ʜᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about_menu')
+        InlineKeyboardButton('🍁 ᴏᴡɴᴇʀ', callback_data='me'),      
+        InlineKeyboardButton('⚙️ ʜᴇʟᴘ', callback_data='help')
    ],[
         InlineKeyboardButton('🔰 ɢᴏ ʙᴀᴄᴋ ᴛᴏ ᴍᴀɪɴ ᴍᴇɴᴜ 🔰', callback_data='nihu')   
     ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.delete()
-        await query.message.reply_photo(
-            photo=PICS,
-            caption=script.START_TXT.format(
-                query.from_user.mention , 
-                temp.U_NAME, 
-                temp.B_NAME,
-            ),
-            reply_markup=reply_markup
+        await query.message.edit_text(
+            text=script.START_TXT.format(query.from_user.mention, temp.B_NAME, temp.U_NAME),
+            reply_markup=reply_markup,
+            parse_mode='html'
         )
         
     elif query.data == "photo":
@@ -1038,22 +1030,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer("⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\nꜱᴇʀɪᴇꜱ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ\n⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\n\nɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ⪼ ᴛʏᴘᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ⪼ ᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ⪼ ᴘᴀꜱᴛᴇ ᴛʜɪꜱ ɢʀᴏᴜᴘ\n\nᴇxᴀᴍᴘʟᴇ : ʟᴏᴋɪ S01 E01\n\n✘ ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)\n\n© Tʜᴏᴍᴀs Sʜᴇʟʙʏ", show_alert=True)   
     elif query.data == 'reqst1':
         await query.answer("Hey Bro 😍\n\n🎯 Click On The Button below The Files You Want  ⬇️", show_alert=True)
-        
-    elif query.data == "about_menu":
-        buttons = [[
-        InlineKeyboardButton('📊 sᴛᴀᴛᴜs', callback_data='stats'),
-        InlineKeyboardButton('📚 ʜᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('🏡 ʜᴏᴍᴇ', callback_data='start')
-        ],[
-        InlineKeyboardButton('⛔️ ᴄʟɪᴄᴋ ᴛᴏ ᴄʟᴏsᴇ ᴘᴀɢᴇs ⛔️', callback_data='close_data')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.delete()
-        await query.message.reply_text(
-            text=script.ABOUT_TXT.format(temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode='html',
-        )
+       
        
     elif query.data == "restric":
         buttons = [[
